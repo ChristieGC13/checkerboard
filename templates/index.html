@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link for bootstrap -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+    .checkerbox {
+    background-color: {{color1}}
+    }
+
+    .odd {
+    background-color: {{color2}};
+    }
+    </style>
+    <title>Checkerboard</title>
+</head>
+<body>
+    <h1>Checkerboard</h1>
+    <div id="board">
+        </table>
+        <tr>
+            {% for i in range(x) %}
+                {% if i%2 ==0 %}
+                    {% for i in range(y) %}
+                        {% if i%2 !=0 %}
+                        <div class="checkerbox"></div>
+                        <div class="checkerbox odd"></div>
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+            {% endfor %}
+        </tr>
+        
+        <table>
+            
+    </div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+#board {
+    width: 800px;
+    height: auto;
+}
+.checkerbox {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+}
